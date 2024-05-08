@@ -1,0 +1,86 @@
+/*--- VARIABLES ---*/
+/* COLORING */
+$c_Main_01: hsl(75, 94%, 57%);
+$c_Sub_01: hsl(0, 0%, 100%);
+$c_Sub_02: hsl(0, 0%, 20%);
+$c_Sub_03: hsl(0, 0%, 12%);
+$c_Sub_04: hsl(0, 0%, 8%);
+
+$c_Win_bg: $c_Sub_04;
+
+$c_Card_bg: $c_Sub_03;
+$c_Card_name_text: $c_Sub_01;
+$c_Card_location_text: $c_Main_01;
+$c_Card_description_text: $c_Sub_01;
+$c_Card_button_bg_neutral: $c_Sub_02;
+$c_Card_button_bg_active: $c_Main_01;
+$c_Card_button_text_neutral: $c_Sub_01;
+$c_Card_button_text_active: $c_Sub_04;
+
+/*--- STYLES ---*/
+/* Sizing */
+
+$fw_button: 700;
+
+$fs_Card_oa: 14px;
+
+$m_Card_sections: 28px;
+$m_Card_Subsections: 14px;
+
+$b_Profile_Card_radius: 10px;
+
+/*--- MIXINS ---*/
+/* Text */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@mixin text_decoration {
+  font-family: 'Inter', sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: 'slnt' 0;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+  }
+  p {
+    margin: 0;
+    font-size: $fs_Card_oa;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1.5rem;
+  }
+  h5 {
+    font-size: 1.25rem;
+  }
+  h6 {
+    font-size: 1rem;
+  }
+}
+
+/* Global styles */
+
+@mixin profile_btn {
+  .profile_btn {
+    color: $c_Card_button_text_neutral;
+    background-color: $c_Card_button_bg_neutral;
+  }
+  .profile_btn:hover {
+    color: $c_Card_button_text_active;
+    background-color: $c_Card_button_bg_active;
+    cursor: pointer;
+  }
+}

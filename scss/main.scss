@@ -1,0 +1,139 @@
+/*--- RESET ---*/
+:root {
+  box-sizing: border-box;
+  font-size: 100%;
+  height: 100vh;
+  width: 100vw;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/*--- IMPORTS ---*/
+@import 'variables';
+
+/*--- CONTENT ---*/
+body {
+  @include text_decoration;
+  width: 100vw;
+  height: 100vh;
+  background-color: $c_Win_bg;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  // HEADER
+  header {
+    height: 10px;
+    width: 100%;
+  }
+
+  // MAIN
+  main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    section.profile_card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px;
+      background-color: $c_Card_bg;
+      border-style: none;
+      border-radius: $b_Profile_Card_radius;
+      .profile_img {
+        display: flex;
+        margin-bottom: $m_Card_sections;
+        img {
+          border-style: none;
+          border-radius: 50%;
+          width: 100px;
+          height: 100px;
+        }
+      }
+      .profile_info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .profile_name {
+          margin-bottom: $m_Card_Subsections;
+          p {
+            color: $c_Card_name_text;
+            font-size: 28px;
+          }
+        }
+        .profile_location {
+          margin-bottom: $m_Card_sections;
+          p {
+            color: $c_Card_location_text;
+          }
+        }
+        .profile_description {
+          margin-bottom: $m_Card_sections;
+          p {
+            color: $c_Card_description_text;
+          }
+        }
+      }
+      .profile_social_links {
+        display: flex;
+        flex-direction: column;
+        row-gap: $m_Card_Subsections;
+        width: 100%;
+        .btn_container {
+          width: 100%;
+          form {
+            button {
+              width: 100%;
+              height: calc(3 * $fs_Card_oa);
+              border-style: none;
+              border-radius: $b_Profile_Card_radius;
+              font-weight: $fw_button;
+            }
+            @include profile_btn;
+          }
+        }
+      }
+    }
+  }
+  // FOOTER
+  footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 10px;
+    margin-bottom: 10px;
+    color: $c_Sub_01;
+    .attribution {
+      bottom: 0;
+      text-align: center;
+    }
+  }
+}
+
+/*--- Media Quaries ---*/
+/* Small devices (mobile) */
+@media screen and (min-width: 0px) {
+  section.profile_card {
+    width: 85%;
+  }
+}
+/* Medium devices (mobile) */
+@media screen and (min-width: 520px) {
+  section.profile_card {
+    width: 45%;
+  }
+}
+
+/* Large devices (desktop) */
+@media screen and (min-width: 1440px) {
+  section.profile_card {
+    width: 25%;
+  }
+}

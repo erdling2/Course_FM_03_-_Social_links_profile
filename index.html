@@ -1,34 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="author" content="erdling2" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Social links profile</title>
+    <title>Frontend Mentor | Social links profile</title>
+    <link rel="stylesheet" type="text/css" href="dist/main.css" />
+  </head>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Jessica Randall
-  London, United Kingdom
-  "Front-end developer and avid reader."
-
-  GitHub
-  Frontend Mentor
-  LinkedIn
-  Twitter
-  Instagram
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+  <!-- BODY -->
+  <body>
+    <!-- HEADER -->
+    <header></header>
+    <!-- MAIN -->
+    <main>
+      <section class="profile_card">
+        <div class="profile_img">
+          <img
+            src="./assets/images/avatar-jessica.jpeg"
+            alt="Jessica Randall" />
+        </div>
+        <div class="profile_info">
+          <div class="profile_name">
+            <p>Jessica Randall</p>
+          </div>
+          <div class="profile_location">
+            <p>London, United Kingdom</p>
+          </div>
+          <div class="profile_description">
+            <p>&quot;Front-end developer and avid reader.&quot;</p>
+          </div>
+        </div>
+        <div class="profile_social_links">
+          <div class="github btn_container">
+            <form action="https://github.com/erdling2">
+              <button class="github_btn profile_btn"><p>GitHub</p></button>
+            </form>
+          </div>
+          <div class="frontendmentor btn_container">
+            <form action="https://www.frontendmentor.io/profile/erdling2">
+              <button class="frontendmentor_btn profile_btn">
+                <p>Frontend Mentor</p>
+              </button>
+            </form>
+          </div>
+          <div class="linkedin btn_container">
+            <form action="#">
+              <button class="linkedin_btn profile_btn"><p>LinkedIn</p></button>
+            </form>
+          </div>
+          <div class="xtwitter btn_container">
+            <form action="#">
+              <button class="xtwitter_btn profile_btn"><p>Twitter</p></button>
+            </form>
+          </div>
+          <div class="instagram btn_container">
+            <form action="#">
+              <button class="instagram_btn profile_btn">
+                <p>Instagram</p>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- FOTTER -->
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://github.com/erdling2" target="_blank">erdling2</a>.
+      </div>
+    </footer>
+  </body>
 </html>
